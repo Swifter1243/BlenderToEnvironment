@@ -24,7 +24,6 @@ Add the following to your SW script:
 
 0:ModelToWall
   path: Name of model file here. (E.G. path:model.dae)
-  duration:400
   track: Name of track here. Must match "trackName" constant from this script. Don't put a space after the colon
   type:3 
 
@@ -59,8 +58,7 @@ function copy(obj) {
 }
 
 map._notes.forEach(x => {
-    if (!x._customData) x._customData = {};
-    if (x._customData._track == trackName) {
+    if (x._customData && x._customData._track == trackName) {
         var y = copy(x);
 
         var pillarPos = y._customData._animation._definitePosition[0];
