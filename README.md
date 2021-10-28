@@ -6,4 +6,6 @@ The transform info comes in the form of notes, since its way easier to use them 
 DONT set the default pillars to false. If you want to get rid of them, yeet them out of render distance.
 This script doesnt work with animations because that requires extra work which I havent done yet and it will just add to the jank. So wait for nyri0's or adapt this one if you want that.
 
-Guide on how to get everything working is in comments in the JS file.
+You can add pretty much as many cubes as you want and the game won't even flinch. They're primitive cubes so they're basically free.
+
+Guide on how to get everything working is in comments in the JS file. Feel free to adapt it to however you need it.
