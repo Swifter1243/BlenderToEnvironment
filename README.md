@@ -9,3 +9,6 @@ This script doesnt work with animations because that requires extra work which I
 You can add pretty much as many cubes as you want and the game won't even flinch. They're primitive cubes so they're basically free.
 
 Guide on how to get everything working is in comments in the JS file. Feel free to adapt it to however you need it.
+
+![image](https://user-images.githubusercontent.com/61858676/139190597-295bcd6e-dc62-4b4d-ae61-6c1bfcecdfc8.png)
+![image](https://user-images.githubusercontent.com/61858676/139190669-97324420-15b6-4637-bd0d-d92be718fec8.png)
