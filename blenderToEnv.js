@@ -95,5 +95,5 @@ map._notes.forEach(x => {
     }
 });
 
-map._notes = map._notes.filter(x => !x._customData || (x._customData && !x._customData._track == trackName));
+map._notes = map._notes.filter(x => (!x._customData) || (x._customData && ((!x._customData._track) == trackName)));
 fs.writeFileSync(mapOutput, JSON.stringify(map, null, 0));
