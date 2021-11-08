@@ -1,17 +1,21 @@
 const trackName = "environment";
-const mapInput = "ExpertPlusLawless.dat"
-const mapOutput = "ExpertPlusStandard.dat"
+const mapFile = "ExpertPlusStandard.dat"
 // You can drag the SW EXE into the map folder to easily reference the file (as shown above) or if you're a lazy fuck you can copy and paste the whole path like an idiot
 
 const fs = require("fs");
 const three = require("three");
-let map = JSON.parse(fs.readFileSync(mapInput));
+let map = JSON.parse(fs.readFileSync(mapFile));
 const pillarToNoodleUnits = 0.1495;
 
 /*
 Made by Swifter
 
-In order to get this script working, you will first need to open your console and type "npm install three". This is a dependancy since I'm too stupid to do my own math
+For this to work, I would recommend my setup of having ExpertPlusStandard or whatever be the output of SW, and then adding ExpertPlusStandard_Old or whatever to the
+info.dat somehow so you can access it in CM for mapping/lighting stuff. (Remember CM/SW will overwrite info.dat so you will need to close those if you wanna update it)
+
+In order to get this script working, you will first need to open your terminal in VSC, and make sure you're in the map directory.
+You can get to the directory by using 'cd "[insert directory here]"' E.X: 'cd "C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\CustomWIPLevels\Joe Nuts"`
+After that type "npm install three". This is a dependancy since I'm too stupid to do my own math
 
 And then, you will need to setup SW. Make sure your .dae follows the SW docs: https://github.com/thelightdesigner/ScuffedWalls/blob/main/Blender%20Project.md
 
@@ -24,10 +28,15 @@ Add the following to your SW script:
 
 0:ModelToWall
   path: Name of model file here. (E.G. path:model.dae)
-  track: Name of track here. Must match "trackName" constant from this script. Don't put a space after the colon
+  track: Name of track here. Must match "trackName" constant from this script. Don't put a space after the colon and don't use quotes
   type:3 
 
 This should run this whole script with node from SW on save of the JS script or the SW script.
+
+Additional info:
+- The objects are placed relative to noodle units, so if you were to add another modeltowall string using walls, everything should overlap. (good for debugging if you're adapting the script!)
+- Y forward in Blender is the Z forward (the direction notes come from) in Beat Saber
+
 If anything ain't working then DM me :) Swifter#1243
 
 */
@@ -96,4 +105,4 @@ map._notes.forEach(x => {
 });
 
 map._notes = map._notes.filter(x => !x._customData || (x._customData._track !== trackName));
-fs.writeFileSync(mapOutput, JSON.stringify(map, null, 0));
+fs.writeFileSync(mapFile, JSON.stringify(map, null, 0));
