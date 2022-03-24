@@ -1,9 +1,10 @@
 THIS REPO IS NOW REDUNDANT.
-A better version of this tool now exists in [ReMapper](https://github.com/Swifter1243/ReMapper)
-It allows for better accuracy, any environment pieces, animations, and other objects/track representation.
+A better version of this tool now exists in [ReMapper](https://github.com/Swifter1243/ReMapper).
+It allows for better accuracy, any environment piece, animations, and other objects/track representation.
+This old version is also difficult to work with, many came to me with problems, this new version is much more user friendly.
 
 # BlenderToEnvironment
-This script is janky as fuck. nyri0 is developing a way better version right now.
+This script is janky as fuck.
 
 This script only works in BTS. It duplicates the pillars and rescales them based off of blender transform info from ScuffedWalls.
 The transform info comes in the form of notes, since its way easier to use them when they scale from the center.
