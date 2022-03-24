@@ -1,3 +1,7 @@
+THIS REPO IS NOW REDUNDANT.
+A better version of this tool now exists in [ReMapper](https://github.com/Swifter1243/ReMapper)
+It allows for better accuracy, any environment pieces, animations, and other objects/track representation.
+
 # BlenderToEnvironment
 This script is janky as fuck. nyri0 is developing a way better version right now.
 
